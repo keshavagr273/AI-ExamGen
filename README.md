@@ -1,4 +1,4 @@
-﻿# 🚀 VedaAI - AI Assessment Creator
+﻿# 🚀 AI Assessment Creator
 
 ## 📌 Overview
 An AI-powered assessment creator designed to help teachers quickly generate structured question papers. Built with Next.js, Express, BullMQ, and MongoDB, this platform features real-time WebSocket updates, robust background AI generation, and a polished, printable output layout based precisely on the provided Figma designs.
@@ -41,7 +41,7 @@ npm install
 Create a \.env\ file in the \ackend\ directory:
 \\\env
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/vedaai
+MONGO_URI=mongodb://localhost:27017/project
 REDIS_URL=redis://localhost:6379
 GEMINI_API_KEY=your_gemini_api_key_here
 \\\
@@ -69,5 +69,3 @@ To take this live, you need to deploy the components separately:
 2. **Database & Cache:** Provision a free MongoDB cluster on **MongoDB Atlas** and a free Redis instance on **Upstash**. Plug these URLs into your backend environment variables.
 3. **Frontend:** Push your GitHub repository to **Vercel** and import the root Next.js app. Make sure to update the \BACKEND_URL\ in the Zustand store (\useAssignmentStore.ts\) to point to your live backend domain instead of localhost.
 
----
-*Created for the VedaAI Full Stack Engineering Assignment*
