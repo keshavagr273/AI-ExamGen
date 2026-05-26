@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans);
+  --color-brand-red: #f05a28;
+  --color-brand-dark: #2d2d2d;
+  --color-brand-bg: #e8e8ea;
+  --color-brand-surface: #f3f4f6;
+  --color-brand-border: #e5e7eb;
+}
+
+:root {
+  --background: #f3f4f6;
+  --foreground: #1f2937;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Custom premium styles */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #f05a28, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CSS Print Styles for Exam Paper */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  aside, 
+  header, 
+  nav, 
+  button, 
+  .no-print,
+  [data-purpose="sidebar"],
+  [data-purpose="top-header"],
+  [data-purpose="ai-banner"],
+  [data-purpose="bottom-actions"] {
+    display: none !important;
+  }
+  
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  
+  [data-purpose="scrollable-content"] {
+    background-color: #ffffff !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  [data-purpose="question-paper"] {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    background-color: #ffffff !important;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+}
